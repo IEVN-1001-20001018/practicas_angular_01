@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">CINEPOLIS</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 left">
+                <h2>Entradas</h2>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)]="nombre" name="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Cantidad de compradores</label>
+                    <input type="number" class="form-control" id="compradores" placeholder="Cantidad" [(ngModel)]="cantidad_personas" name="cantidad_personas">
+                </div>
+                <label for="">Tarjeta Cinepolis</label>
+                <br>
+                <div class="form-check form-check-inline" *ngFor="let i of tarjetaCineco">
+                    <input type="radio" class="form-check-input" [(ngModel)]="tarjeta" [value]="i.valor" name="tarjeta"> 
+                    <label for="">{{i.nombre}}</label>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Cantidad de boletos</label>
+                    <input type="number" class="form-control" id="boletos" placeholder="Boletos" [(ngModel)]="cantidad_boleto" name="cantidad_boleto">
+                </div>
+            </div>
+            <div class="col-4 right">
+                <h2>Salidas</h2>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Valor a pagar</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" [placeholder]="res">
+                    <h2>{{msj}}</h2>
+                </div>
+                <div>
+                    <h2>{{nombre}}</h2>
+                </div>
+            </div>
+            <div class="col-6 center">
+                <h2>Acciones</h2>
+                <button class="btn btn-primary accion" type="submit" (click)="compra()">Procesar</button>
+                <button class="btn btn-primary accion" type="submit">Salir</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

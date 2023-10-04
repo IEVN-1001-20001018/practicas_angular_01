@@ -1,0 +1,39 @@
+body {
+    background-image: url('https://th.bing.com/th/id/OIP.S_AJNjJsGG-auNxoZ8znegHaED?pid=ImgDet&rs=1');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: italic;
+}
+
+.left, .center, .right{
+    border: solid  1px white;
+    margin-left: 11%;
+    border-style: dashed;
+}
+
+label, h2{
+    color: white;
+    font-style: italic;
+}
+h1{
+    font-style: italic;
+    background-color: whitesmoke;
+    border: 1px black;
+}
+
+.center{
+    margin-left: 30%;
+    margin-top: 5%; 
+}
+
+.accion{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20%;
+}
+
+button{
+    background-color: whitesmoke;
+    color: black;
+}
+
